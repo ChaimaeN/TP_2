@@ -42,27 +42,42 @@ def adn_read(fastafile):  #This function verifies if our file only contains nucl
                     if char not in ADN_LIST: #If the characters is not in the list
                         print("In the file" + fastafile + ":" + char +
                               " It's not a nucl in line " + str(counter) +
+<<<<<<< 39b42bff7238b3155fb0f48a6b850830604ba434
                               " and column " + str(column_counter) +
                               " for the sequence " + header[1:])
+=======
+                              " and column " + str(column_counter) + " for the sequence " + header[1:])
+>>>>>>> update 1
 
 
 for arg in sys.argv[1:]: #For every file we put in our args exept the python file
     if os.path.isfile(arg): #If our file exists
+<<<<<<< 39b42bff7238b3155fb0f48a6b850830604ba434
         if os.path.splitext(arg)[1] == '.fasta' \
                 or os.path.splitext(arg)[1] == '.faa' \
                 or os.path.splitext(arg)[1] == '.fa' \
                 or os.path.splitext(arg)[1] == '.fna': #If our file extention is a fasta file
+=======
+        if os.path.splitext(arg)[1] == '.fasta' or os.path.splitext(arg)[1] == '.faa' or os.path.splitext(arg)[1] == '.fa' or os.path.splitext(arg)[1] == '.fna': #If our file extention is a fasta file
+>>>>>>> update 1
                 #And if the fasta control is True
                 if fasta_control(arg) is True:
                     # So we apply the adn_read function
                     adn_read(arg)
                 # The file doesn't contain a greater sign
                 else:
+<<<<<<< 39b42bff7238b3155fb0f48a6b850830604ba434
                     print("The following file : " + str(arg)
                           + " may be not a fasta file, doesn't contain any headers. ")
         # The extension is not a fasta extension
         else:
             print("The following file : " + str(arg)
                   + " is not a fasta file, check the extension. ")
+=======
+                    print("The following file : " + str(arg) + " may be not a fasta file, doesn't contain any headers. ")
+        # The extension is not a fasta extension
+        else:
+            print("The following file : " + str(arg) + " is not a fasta file, check the extension. ")
+>>>>>>> update 1
     else: #The File doesn't exist
         print("The following file : " + str(arg) + " doesn't exist. ")
